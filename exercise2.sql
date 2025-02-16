@@ -24,4 +24,4 @@ select m.Num_mus,r.titre_Rep from Musicien m join Representation r on r.Num_Rep 
 select r.Num_Rep,r.titre_Rep,r.lieu,p.tarif from Representation r join Programmer p on r.Num_Rep = p.Num_Rep 
 where dateP='2008-07-25' ;
 select count(*) from Musicien where Num_mus=20;
-select r.Num_Rep,P.DateP from Representation r join Programmer P where P.tarif<=20;
+select r.Num_Rep,P.DateP from Representation r join Programmer P on r.Num_Rep=P.Num_Rep where P.tarif<=20;
